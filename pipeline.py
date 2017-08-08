@@ -433,7 +433,7 @@ def pipeline(orig):
 
     offset = find_offset_from_center(img, left_fitx, right_fitx)
 
-    result = project(warped, orig, ploty, left_fitx, right_fitx, M, avg_curverad, offset, avg_left_fitx, avg_right_fitx)
+    result = project(warped, img, ploty, left_fitx, right_fitx, M, avg_curverad, offset, avg_left_fitx, avg_right_fitx)
     return result
 
 

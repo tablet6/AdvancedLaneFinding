@@ -107,6 +107,15 @@ I calculated offset from center in method `find_offset_from_center` in lines 385
 
 I implemented projection on lane drawing onto the real lane in lines 351 through 383 in my code in `pipeline.py` in the function `project()`.  Here is an example of my result on a test image:
 
+
+Comments from Review:
+"Lanes are drawn on the distorted image instead of undistorted one. It is obvious by looking at the car front hood. Please, make sure to undistort the image in the beginning of the pipeline, use that image for further processing and at the end lanes should also be drawn on the undistorted image not the original image."
+
+Comments from me:
+Lane lines are now shown on the undistorted image than on the original image. Although the Project Rubric asked to show on original image. So I am a bit confused.
+"The fit from the rectified image has been warped back onto the original image and plotted to identify the lane boundaries."
+
+
 ![alt text][image6]
 
 ---
@@ -114,6 +123,16 @@ I implemented projection on lane drawing onto the real lane in lines 351 through
 ### Pipeline (video)
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
+
+Comments from Review:
+"Lanes are drawn on the distorted frame instead of undistorted one."
+
+Comments from me:
+Lane lines are now shown on the undistorted frames than on the original frames. 
+From the project Rubric here is the criteria:
+"Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!)"
+I believe my video have wobbly lines, but I think not catastrophic. I agree I need to do a better job. I wanted to know if the lane lines are catastrophoic that the Project couldn't be accepted?
+
 
 Here's a [link to my video result](./output_images/project_video_mapped.mp4)
 
